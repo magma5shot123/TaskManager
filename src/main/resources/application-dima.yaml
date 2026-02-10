@@ -1,0 +1,26 @@
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+spring:
+  datasource:
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://db:5432/testdb
+    driver-class-name: org.postgresql.Driver
+  task:
+    execution:
+      pool:
+        core-size: 2
+        max-size: 5
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8085
+
+
+
